@@ -1,3 +1,4 @@
 export async function GET() {
-  return new Response("abagabo");
+  const personne = { name: "MUHOZA Clayton", age: "24ans" };
+  return new Response("");
 }

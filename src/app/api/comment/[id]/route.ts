@@ -14,10 +14,10 @@ export async function PUT(
     (comment) => comment.id === parseInt(params.id)
   );
   const { comment } = await req.json();
-  if (index < comments.length) {
+  if (index >= 0) {
     comments[index].comment = comment;
-    return Response.json(comment);
+    return Response.json(comments[index]);
   } else {
-    return Response.error();
+    return Response.json({ message: "le commentaire n'existe pas" });
   }
 }
