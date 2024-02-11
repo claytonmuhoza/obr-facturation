@@ -1,9 +1,8 @@
 export interface clientInterface {
   id: number;
-  nif: string;
-  rc: string;
+  nif: string | null;
+  rc: string | null;
   nom: string;
-  adresse: string;
-  tva: boolean;
+  adresse: string | null;
 }
 class client {}
